@@ -10,7 +10,7 @@
     },
     "backend": {
       "builder": "@vercel/python",
-      "runtime": "python3.14",
+      "runtime": "python3.12",
       "entrypoint": "backend/app/main.py",
       "buildCommand": "pip install -r requirements.txt",
       "installCommand": "pip install -r requirements.txt",
