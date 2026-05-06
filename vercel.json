@@ -1,15 +1,18 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "experimentalServices": {
+  "version": 3,
+  "services": {
     "frontend": {
+      "type": "web",
       "framework": "nextjs",
-      "workspace": "frontend",
+      "root": "frontend",
       "routePrefix": "/"
     },
     "backend": {
+      "type": "web",
       "builder": "@vercel/python",
       "runtime": "python3.14",
-      "workspace": "backend",
+      "root": "backend",
       "entrypoint": "app/main.py",
       "routePrefix": "/_/backend"
     }
