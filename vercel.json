@@ -6,14 +6,17 @@
       "use": "@vercel/next"
     },
     {
-      "src": "main.py",
-      "use": "@vercel/python"
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.12"
+      }
     }
   ],
   "routes": [
     {
       "src": "^/api/(.*)$",
-      "dest": "/main.py"
+      "dest": "/api/index.py"
     },
     {
       "src": "^/(.*)$",
