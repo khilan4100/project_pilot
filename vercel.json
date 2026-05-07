@@ -1,20 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "experimentalServices": {
-    "frontend": {
-      "framework": "nextjs",
-      "root": "frontend",
-      "buildCommand": "npm run build",
-      "installCommand": "npm install",
-      "routePrefix": "/"
-    },
-    "backend": {
-      "builder": "@vercel/python",
-      "runtime": "python3.12",
-      "entrypoint": "backend/app/main.py",
-      "buildCommand": "pip install -r requirements.txt",
-      "installCommand": "pip install -r requirements.txt",
-      "routePrefix": "/_/backend"
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend/api/index.py"
+    }
+  ],
+  "functions": {
+    "backend/api/index.py": {
+      "runtime": "python3.12"
     }
   }
 }
