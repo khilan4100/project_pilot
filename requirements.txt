@@ -1,8 +1,1 @@
-streamlit
-
-python-docx
-python-pptx
-pandas
-fpdf
-python-dotenv
-watchdog
+-r backend/requirements.txt
