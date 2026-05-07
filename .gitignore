@@ -62,3 +62,6 @@ frontend/lovable_import/
 frontend/fix_imports.py
 promote_admin.py
 backend/scripts/
+
+.vercel
+.env*.local
